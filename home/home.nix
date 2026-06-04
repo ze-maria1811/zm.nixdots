@@ -86,13 +86,13 @@ programs.git = {
 
 
 
-".config/hypr/hyprpaper.conf".text = ''
-wallpaper {
-monitor = 
-path = ~/.config/hypr/wallpapers/nixpapers/waifu_black.png
-fit_mode = cover
-    }
-    '';
+#".config/hypr/hyprpaper.conf".text = ''
+#wallpaper {
+#monitor = 
+#path = ~/.config/hypr/wallpapers/nixpapers/waifu_black.png
+#fit_mode = cover
+#    }
+#    '';
 
 
   };
