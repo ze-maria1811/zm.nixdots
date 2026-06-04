@@ -2,7 +2,7 @@
 {
   programs.zsh = {
 	enable = true;
-	autosuggestions.enable = true;
+	enableCompletion = true;
 	syntaxHighlighting.enable = true;
 	sessionVariables.SUDO_EDITOR = "nvim";
 
@@ -16,8 +16,6 @@
   programs.fzf = {
 	enable = true;
 	enableZshIntegration = true;
-	fuzzyCompletion = true;
-	keybindings = true;
   };
 
 }

@@ -6,7 +6,7 @@
 		./nvidia-pc.nix
 		];
 	
-	networking.hostname = "vren";
+	networking.hostName = "vren";
 
 }
 

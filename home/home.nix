@@ -65,6 +65,14 @@ programs.kitty = { # Kitty settings: maybe make it a separate module ??
 
 programs.btop.enable = true; # Btop. Will configure declaratively later.
 programs.waybar.enable = true;
+programs.git = {
+	enable = true;
+	userName = "ze-maria1811";
+	userEmail = "vitor.ctrrs@gmail.com";
+
+};
+
+
   home.file = {
 
   ".config/hypr/hyprland.conf".source = ./hyprland/hyprland.conf;

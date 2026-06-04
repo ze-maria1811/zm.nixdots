@@ -22,10 +22,11 @@
            system = "x86_64-linux";
 	   modules = [
 		./hosts/pc-quark
-		home-manager.nixosModules-home-manager
+		home-manager.nixosModules.home-manager
 		 { home-manager = {
 		    extraSpecialArgs = {inherit inputs;};
-		    useGlobalPackages = true; 
+		    useGlobalPkgs = true;
+		    sharedModules = [inputs.nixvim.homeManagerModules.nixvim]; 
 		    users = {"vren" = import ./home/home.nix;};
 		    }; 
 	         }
@@ -37,10 +38,11 @@
 	   system = "x86_64-linux";
 	   modules = [
 		./hosts/lp-charm
-		home-manager.nixosModules-home-manager
+		home-manager.nixosModules.home-manager
 		 { home-manager = {
 		    extraSpecialArgs = {inherit inputs;};
-		    useGlobalPackages = true; 
+		    useGlobalPkgs = true;
+		    sharedModules = [inputs.nixvim.homeManagerModules.nixvim];
 		    users = {"vren" = import ./home/home.nix;};
 		    }; 
 	         }

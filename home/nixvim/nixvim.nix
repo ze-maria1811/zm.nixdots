@@ -98,8 +98,8 @@ programs.nixvim = {
          {
             mode = "n";
             key = "<leader>ffe";
-            action = "<cmd>FzfLua files cwd=/etc/nixos<CR>";
-            options.desc = "Looks up files starting from /etc/nixos";
+            action = "<cmd>FzfLua files cwd=~/.config/nixos<CR>";
+            options.desc = "Looks up files starting from ~/.config/nixos";
          }
          {
             mode = "n";
