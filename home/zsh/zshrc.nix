@@ -3,7 +3,7 @@
   programs.zsh = {
 	enable = true;
 	enableCompletion = true;
-#	syntaxHighlighting.enable = true;
+	syntaxHighlighting.enable = true;
 	sessionVariables.SUDO_EDITOR = "nvim";
 	plugins = [
 	{
