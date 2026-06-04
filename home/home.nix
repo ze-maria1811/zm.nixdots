@@ -26,7 +26,8 @@ imports = [
 	obsidian
 	inkscape
 	wallust
-	
+	zsh-powerlevel10k
+
 	font-awesome
 	nerd-fonts.meslo-lg
 	nerd-fonts.iosevka
@@ -83,8 +84,7 @@ programs.git = {
 	recursive = true;
    };
 
-
-
+ ".p10k.zsh".source = ./zsh/.p10k.zsh;
 
 ".config/hypr/hyprpaper.conf".text = ''
 wallpaper {
