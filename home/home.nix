@@ -77,7 +77,7 @@ programs.git = {
   home.file = {
 
  ".config/hypr/hyprland.conf" ={ 
-	source = ./hyprland/wallpapers;
+	source = ./hyprland/hyprland.conf;
 	force = true;
   };
 
@@ -86,7 +86,11 @@ programs.git = {
 	force = true;
   };
 
-#  ".config/hypr/hyprpaper.conf".source = ./hyprland/hyprpaper.conf;
+  ".config/hypr/hyprpaper.conf" = {
+	source = ./hyprland/hyprpaper.conf;
+	force = true;
+  };
+
   ".config/hypr/wallpapers" = {
 	source = ./hyprland/wallpapers;
 	recursive = true;
@@ -95,13 +99,13 @@ programs.git = {
 
  ".p10k.zsh".source = ./zsh/.p10k.zsh;
 
-".config/hypr/hyprpaper.conf".text = ''
-wallpaper {
-monitor = 
-path = ~/.config/hypr/wallpapers/nixpapers/waifu_black.png
-fit_mode = cover
-    }
-    '';
+# ".config/hypr/hyprpaper.conf".text = ''
+#wallpaper {
+#monitor = 
+#path = ~/.config/hypr/wallpapers/nixpapers/waifu_black.png
+#fit_mode = cover
+#    }
+#    '';
 
 
   };
