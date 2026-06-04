@@ -76,12 +76,21 @@ programs.git = {
 
   home.file = {
 
-  ".config/hypr/hyprland.conf".source = ./hyprland/hyprland.conf;
-  ".config/hypr/keybinds.conf".source = ./hyprland/keybinds.conf;
+ ".config/hypr/hyprland.conf" ={ 
+	source = ./hyprland/wallpapers;
+	force = true;
+  };
+
+ ".config/hypr/keybinds.conf" = {
+	source = ./hyprland/keybinds.conf;
+	force = true;
+  };
+
 #  ".config/hypr/hyprpaper.conf".source = ./hyprland/hyprpaper.conf;
   ".config/hypr/wallpapers" = {
 	source = ./hyprland/wallpapers;
 	recursive = true;
+	force = true;
    };
 
  ".p10k.zsh".source = ./zsh/.p10k.zsh;
