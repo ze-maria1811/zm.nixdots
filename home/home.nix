@@ -77,7 +77,7 @@ programs.git = {
 
   ".config/hypr/hyprland.conf".source = ./hyprland/hyprland.conf;
   ".config/hypr/keybinds.conf".source = ./hyprland/keybinds.conf;
-  ".config/hypr/hyprpaper.conf".source = ./hyprland/hyprpaper.conf;
+#  ".config/hypr/hyprpaper.conf".source = ./hyprland/hyprpaper.conf;
   ".config/hypr/wallpapers" = {
 	source = ./hyprland/wallpapers;
 	recursive = true;
@@ -86,13 +86,13 @@ programs.git = {
 
 
 
-#".config/hypr/hyprpaper.conf".text = ''
-#wallpaper {
-#monitor = 
-#path = ~/.config/hypr/wallpapers/nixpapers/waifu_black.png
-#fit_mode = cover
-#    }
-#    '';
+".config/hypr/hyprpaper.conf".text = ''
+wallpaper {
+monitor = 
+path = ~/.config/hypr/wallpapers/nixpapers/waifu_black.png
+fit_mode = cover
+    }
+    '';
 
 
   };
