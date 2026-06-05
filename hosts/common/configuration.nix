@@ -53,6 +53,14 @@
       enable = true;
       xwayland.enable = true;
     };
+    nix-ld = {
+      enable = true;
+      libraries = with pkgs; [
+      	stdenv.cc.cc
+	zlib
+	glib
+      ];
+    };
   };
 
   services.greetd = { # Login manager (greetd) settings
