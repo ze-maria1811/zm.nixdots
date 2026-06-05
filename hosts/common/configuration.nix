@@ -39,6 +39,15 @@
 
   programs = { # Important programs
     zsh.enable = true;
+    git = {
+      config = {
+      	user = {
+	  name = "ze-maria1811";
+	  email = "vitor.ctrrs@gmail.com";
+	};
+      };
+    };
+
     hyprland = {
       xwayland.enable = true;
     };

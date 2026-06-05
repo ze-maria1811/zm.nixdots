@@ -26,15 +26,5 @@
     waybar = {
 	enable = true;
     };
-
-    git = {
-	enable = true;
-	config = {
-	 user = {
-	   name = "ze-maria1811";
-	   email = "vitor.ctrrs@gmail.com";
-	};
-      };
-    };
   };
 }
