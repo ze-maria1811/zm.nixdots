@@ -3,7 +3,7 @@
 	imports = [
 		../common/configuration.nix
 		./nvidia-lp.nix
-#		./hardware-configuration.nix
+		./hardware-configuration.nix
 	];
 
 	hardware.bluetooth = {
@@ -13,7 +13,7 @@
 	
 	networking = {
 		hostName = "vrenlp";
-		networkManager.enable = true;
+		networkmanager.enable = true;
 		nameservers = [ 
 			"1.1.1.1"
 			"1.0.0.1"
