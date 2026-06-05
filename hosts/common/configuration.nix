@@ -77,7 +77,6 @@
   fonts = { # Font settings
     enableDefaultPackages = true;
     fontconfig.enable = true;
-    antialias = true;
   };
  
   environment = { # Environment settings
