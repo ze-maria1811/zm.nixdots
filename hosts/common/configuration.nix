@@ -40,6 +40,7 @@
   programs = { # Important programs
     zsh.enable = true;
     git = {
+      enable = true;
       config = {
       	user = {
 	  name = "ze-maria1811";
@@ -49,6 +50,7 @@
     };
 
     hyprland = {
+      enable = true;
       xwayland.enable = true;
     };
   };
