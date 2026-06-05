@@ -15,7 +15,7 @@
      };
 
      "zm.nixdots" = {
-	url = "https://github.com/ze-maria1811/zm.nixdots";
+	url = "github:ze-maria1811/zm.nixdots";
 	flake = false;
      };
   };

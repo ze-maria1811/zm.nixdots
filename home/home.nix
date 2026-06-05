@@ -1,4 +1,4 @@
-{inputs, pkgs, ... }:
+{pkgs, ... }:
 {
  imports = [
  ./modules/programs.nix
@@ -37,28 +37,28 @@
 
   home.file =  { # Dotfile configuration
     ".config/hypr/hyprland.conf" = { 
-	source = inputs."zm.nixdots" + "/home/hyprland/hyprland.conf";
+    	source = "${./hyprland/hyprland.conf}";
 	force = true;
 	  };
 
     ".config/hypr/keybinds.conf" = {
-	source = inputs."zm.nixdots" + "/home/hyprland/keybinds.conf";
+    	source = "${./hyprland/keybinds.conf}";
 	force = true;
 	  };
 
     ".config/hypr/hyprpaper.conf" = {
-	source = inputs."zm.nixdots" + "/home/hyprland/hyprpaper.conf";
+    	source = "${./hyprland/hyprpaper.conf}";
 	force = true;
 	  };
 
     ".config/hypr/wallpapers" = {
-	source = inputs."zm.nixdots" + "/home/hyprland/wallpapers";
+	source = "${./hyprland/wallpapers}";
 	force = true;
 	recursive = true;
 	   };
 
     ".p10k.zsh" = {
-	source = inputs."zm.nixdots" + "/home/zsh/.p10k.zsh";
+	source = "${./zsh/.p10k.zsh}";
 	force = true;
 	  };
   };
