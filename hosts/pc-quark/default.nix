@@ -1,4 +1,4 @@
-{...}:
+{pkgs, ...}:
 {
 	imports = [
 		../common/configuration.nix
@@ -7,6 +7,11 @@
 		];
 	
 	networking.hostName = "vren";
-
+	home-manager.users.vren = {
+		home.packages = with pkgs; [
+		  steam
+		  discord
+		];
+	};
 }
 

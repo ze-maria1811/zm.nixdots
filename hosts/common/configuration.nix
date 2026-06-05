@@ -7,7 +7,18 @@
        inputs.home-manager.nixosModules.default
     ];
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];   
+
+  nix = { # Nix related settings; enables nix-command and flakes.
+  	settings = {
+	  experimental-features = ["nix-command" "flakes"];
+	};
+	nixPath = [
+	  "nixpkgs=/nix/var/nix/profiles/per-user/root/channels/nixos"
+	  "nixos-config=/home/vren/.config/nixos/hosts/common/configuration.nix"
+	  "/nix/var/nix/profiles/per-user/root/channels"
+	];
+  };
+
   nixpkgs.config.allowUnfree = true;
   programs.zsh.enable = true;
   services.printing.enable = true;
@@ -45,7 +56,7 @@ services.greetd = { # Enables greetd
 	enable = true;
 	settings = {
 	 default_session = {
-	  command = "${pkgs.tuigreet}/bin/tuigreet --time --cmd Hyprland";
+	  command = "${pkgs.tuigreet}/bin/tuigreet --time --cmd start-hyprland";
 	  user = "greeter";
 		};
 	};

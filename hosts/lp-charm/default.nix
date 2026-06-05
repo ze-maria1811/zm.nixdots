@@ -1,10 +1,9 @@
-{...}:
-
+{pkgs, ...}:
 {
 	imports = [
+		../common/configuration.nix
 		./nvidia-lp.nix
 		./hardware-configuration.nix
-		../common/configuration.nix
 	];
 
 	hardware.bluetooth = {
@@ -20,5 +19,10 @@
 			"1.0.0.1"
 		];
 	};
-
+	
+	home-manager.users.vren = {
+		home.packages = with pkgs; [
+		  vscode 
+		];
+	};
 }
