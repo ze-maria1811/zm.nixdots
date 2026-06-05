@@ -1,10 +1,5 @@
 {pkgs, ...}:
 {
-  fonts = {
-    enableDefaultPackages = true;
-    fontconfig.enable = true;
-  };
-
   home.packages = with pkgs; [
 	font-awesome
 

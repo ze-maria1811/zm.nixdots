@@ -85,7 +85,8 @@
       "inputs": {
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs",
-        "nixvim": "nixvim"
+        "nixvim": "nixvim",
+        "zm.nixdots": "zm.nixdots"
       }
     },
     "systems": {
@@ -101,6 +102,18 @@
         "owner": "nix-systems",
         "repo": "default",
         "type": "github"
+      }
+    },
+    "zm.nixdots": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-zAGtmJNUEan6tLewap/163RBwVvav5o8taRtcSI6fXM=",
+        "type": "file",
+        "url": "https://github.com/ze-maria1811/zm.nixdots"
+      },
+      "original": {
+        "type": "file",
+        "url": "https://github.com/ze-maria1811/zm.nixdots"
       }
     }
   },

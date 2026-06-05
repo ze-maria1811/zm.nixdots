@@ -1,12 +1,6 @@
 { pkgs, inputs, ... }:
-
 {
-
-  imports =
-    [ 
-       inputs.home-manager.nixosModules.default
-    ];
-
+ imports = [inputs.home-manager.nixosModules.default];
 
   nix = { # Nix related settings; enables nix-command and flakes.
   	settings = {
@@ -19,50 +13,48 @@
 	];
   };
 
-  nixpkgs.config.allowUnfree = true;
-  programs.zsh.enable = true;
-  services.printing.enable = true;
-
   boot = { # Bootloader and Kernel Version Settings
-	loader = {
-	  systemd-boot.enable = true;
-	  efi.canTouchEfiVariables = true;
-	  };
+    kernelPackages = pkgs.linuxPackages_latest;
+    loader = {
+      systemd-boot.enable = true;
+      efi.canTouchEfiVariables = true;
+    };
+  };
+ 
+  i18n = { # Internacionalization settings
+    defaultLocale = "en_US.UTF-8";
+    extraLocaleSettings = {
+	    LC_ADDRESS = "pt_BR.UTF-8";
+	    LC_IDENTIFICATION = "pt_BR.UTF-8";
+	    LC_MEASUREMENT = "pt_BR.UTF-8";
+	    LC_MONETARY = "pt_BR.UTF-8";
+	    LC_NAME = "pt_BR.UTF-8";
+	    LC_NUMERIC = "pt_BR.UTF-8";
+	    LC_PAPER = "pt_BR.UTF-8";
+	    LC_TELEPHONE = "pt_BR.UTF-8";
+	    LC_TIME = "pt_BR.UTF-8";
+    };
 
-	kernelPackages = pkgs.linuxPackages_latest;
   };
 
-  time.timeZone = "America/Sao_Paulo";
-  i18n.defaultLocale = "en_US.UTF-8";
-
-  i18n.extraLocaleSettings = {
-    LC_ADDRESS = "pt_BR.UTF-8";
-    LC_IDENTIFICATION = "pt_BR.UTF-8";
-    LC_MEASUREMENT = "pt_BR.UTF-8";
-    LC_MONETARY = "pt_BR.UTF-8";
-    LC_NAME = "pt_BR.UTF-8";
-    LC_NUMERIC = "pt_BR.UTF-8";
-    LC_PAPER = "pt_BR.UTF-8";
-    LC_TELEPHONE = "pt_BR.UTF-8";
-    LC_TIME = "pt_BR.UTF-8";
+  programs = { # Important programs
+    zsh.enable = true;
+    hyprland = {
+      xwayland.enable = true;
+    };
   };
 
- programs.hyprland = { #Enables Hyprland
-  	enable = true;
- 	xwayland.enable = true;
+  services.greetd = { # Login manager (greetd) settings
+    enable = true;
+    settings = {
+      default_session = {
+        command = "${pkgs.tuigreet}/bin/tuigreet --time --cmd start-hyprland";
+	user = "greeter";
+      };
+    };
   };
 
-services.greetd = { # Enables greetd
-	enable = true;
-	settings = {
-	 default_session = {
-	  command = "${pkgs.tuigreet}/bin/tuigreet --time --cmd start-hyprland";
-	  user = "greeter";
-		};
-	};
-};
-
-  services.xserver.xkb = { # Xkb settings
+  services.xserver.xkb = { # Universal keyboard settings
     layout = "br";
     variant = "abnt2";
   };
@@ -81,19 +73,31 @@ services.greetd = { # Enables greetd
     extraGroups = [ "networkmanager" "wheel" ];
     shell = pkgs.zsh;
   };
-  
-  environment.shells = with pkgs; [ zsh ];
-  environment.systemPackages = with pkgs; [
-     wget
-     python3
-  ];
 
-nix.gc = { #Garbage collection
-	automatic = true;
-	dates = "weekly";
-	options = "--delete-older-than 14d";
-};
+  fonts = { # Font settings
+    enableDefaultPackages = true;
+    fontconfig.enable = true;
+    antialias = true;
+  };
+ 
+  environment = { # Environment settings
+    shells = with pkgs; [zsh];
+    systemPackages = with pkgs; [
+    	wget
+	python3
+	rustup
+    ];
+  };
 
+  nix.gc = { #Garbage collection
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 14d";
+  };
+
+  time.timeZone = "America/Sao_Paulo";
+  nixpkgs.config.allowUnfree = true;
+  services.printing.enable = true;
   system.stateVersion = "25.05";
 
 }

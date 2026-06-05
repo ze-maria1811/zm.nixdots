@@ -9,7 +9,7 @@
 
   programs.home-manager.enable = true;
 
-  home = { 
+  home = { # General home settings 
     username = "vren";
     homeDirectory = "/home/vren";
     stateVersion = "26.05";
@@ -35,7 +35,7 @@
     ];
   };
 
-  home.file =  {
+  home.file =  { # Dotfile configuration
     ".config/hypr/hyprland.conf" = { 
 	source = inputs."zm.nixdots" + "/home/hyprland/hyprland.conf";
 	force = true;
