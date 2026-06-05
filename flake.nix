@@ -23,7 +23,7 @@
   outputs = { self, nixpkgs, home-manager, ... }@inputs: {
     nixosConfigurations = {
 	pc-quark = nixpkgs.lib.nixosSystem { # PC host settings
-	   specialArgs = {inherit inputs;};
+	   specialArgs = {inherit self inputs;};
            system = "x86_64-linux";
 	   modules = [
 		./hosts/pc-quark
@@ -39,7 +39,7 @@
 	};
 
 	lp-charm = nixpkgs.lib.nixosSystem { # Laptop host settings
-	   specialArgs = {inherit inputs;};
+	   specialArgs = {inherit self inputs;};
 	   system = "x86_64-linux";
 	   modules = [
 		./hosts/lp-charm

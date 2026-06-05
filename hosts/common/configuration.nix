@@ -34,7 +34,18 @@
 	    LC_TELEPHONE = "pt_BR.UTF-8";
 	    LC_TIME = "pt_BR.UTF-8";
     };
+  };
 
+  xdg.mime = { # XDG MIME settings
+    enable = true;
+    defaultApplications = {
+      "text/html" = "firefox.desktop";
+      "image/svg+xml" = "org.inkscape.Inkscape.desktop";
+      "image/*" = "swayimg.desktop";
+      "video/mp4" = "mpv.desktop";
+      "audio/*" = "mpv.desktop";
+      "application/pdf" = "org.pwmt.zathura.desktop";
+    };
   };
 
   programs = { # Important programs

@@ -160,6 +160,7 @@ programs.nixvim = {
 			  quickfix_mode = 0;
 			  conceallevel = 1;
 			           };
+			  view_method = "zathura_simple";
 		};
 
 		treesitter = {

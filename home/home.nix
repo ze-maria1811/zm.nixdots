@@ -29,6 +29,8 @@
 	inkscape
 	wallust
 	zsh-powerlevel10k
+	mpv
+	swayimg
 	font-awesome
 	nerd-fonts.meslo-lg
 	nerd-fonts.iosevka
