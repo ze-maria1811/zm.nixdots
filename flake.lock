@@ -107,7 +107,7 @@
     "zm.nixdots": {
       "flake": false,
       "locked": {
-        "narHash": "sha256-zAGtmJNUEan6tLewap/163RBwVvav5o8taRtcSI6fXM=",
+        "narHash": "sha256-b9oPZBlEzTd9tZEvKFWD7sZs30OglcwhEnCFp67jd/w=",
         "type": "file",
         "url": "https://github.com/ze-maria1811/zm.nixdots"
       },
