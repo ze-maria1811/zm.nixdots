@@ -3,7 +3,7 @@
 	imports = [
 		../common/configuration.nix
 		./nvidia-lp.nix
-		./hardware-configuration.nix
+#		./hardware-configuration.nix
 	];
 
 	hardware.bluetooth = {
