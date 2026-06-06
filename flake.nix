@@ -31,7 +31,7 @@
 		 { home-manager = {
 		    extraSpecialArgs = {inherit inputs;};
 		    useGlobalPkgs = true;
-		    sharedModules = [inputs.nixvim.homeManagerModules.nixvim]; 
+		    sharedModules = [inputs.nixvim.homeModules.nixvim]; 
 		    users = {"vren" = import ./home/home.nix;};
 		    }; 
 	         }
@@ -47,7 +47,7 @@
 		 { home-manager = {
 		    extraSpecialArgs = {inherit inputs;};
 		    useGlobalPkgs = true;
-		    sharedModules = [inputs.nixvim.homeManagerModules.nixvim];
+		    sharedModules = [inputs.nixvim.homeModules.nixvim];
 		    users = {"vren" = import ./home/home.nix;};
 		    }; 
 	         }

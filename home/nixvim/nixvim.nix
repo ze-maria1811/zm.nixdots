@@ -16,7 +16,7 @@ in
 {
 programs.nixvim = {
 	enable = true;
-	colorschemes.gruvbox.enable = true;
+	colorschemes.kanagawa.enable = true;
 	globals.mapleader = " ";
 	extraPlugins = [luasnip-latex-snippets];
 	extraConfigLuaPost = ''
@@ -27,8 +27,6 @@ programs.nixvim = {
 	
 	        '';	
 	opts.mouse = "";
-	
-
 	keymaps = [ 
 
 	 # First, a necessary evil...
@@ -154,8 +152,6 @@ programs.nixvim = {
 
 		vimtex = {
 			enable = true;
-			zathuraPackage = pkgs.zathura;
-
 			settings = {
 			  quickfix_mode = 0;
 			  conceallevel = 1;
@@ -219,9 +215,8 @@ programs.nixvim = {
 
 		luasnip = {
 			enable = true;
-			fromVscode = [	{}  ];
-			};
-		
+			fromVscode = [	{}  ]; };
+
 		lualine.enable = true;
 		fzf-lua.enable = true;
 		telescope.enable = true;
@@ -229,8 +224,21 @@ programs.nixvim = {
 		cmp-vimtex.enable = true;
 		web-devicons.enable = true;
 		nvim-autopairs.enable = true;
-
 	       };
-
 	};
+
+  programs.zathura = {
+    enable = true;
+    options = {
+	selection-clipboard = "clipboard";
+	default-bg = "#1F1F28";
+	default-fg = "#C8C093";
+	recolor = true;
+	recolor-lightcolor = "#1F1F28";
+	recolor-darkcolor = "#FFFFFF";
+    };
+  };
+
+
+
 }

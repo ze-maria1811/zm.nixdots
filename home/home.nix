@@ -21,9 +21,9 @@
 	spotify
 	cmatrix
 	fastfetch
-	zathura
 	jdk	
 	hyprpaper
+	hyprpanel
 	firefox
 	obsidian
 	inkscape
