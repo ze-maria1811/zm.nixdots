@@ -31,6 +31,9 @@
 	zsh-powerlevel10k
 	mpv
 	swayimg
+	hyprshot
+	flameshot
+	libreoffice
 	font-awesome
 	nerd-fonts.meslo-lg
 	nerd-fonts.iosevka

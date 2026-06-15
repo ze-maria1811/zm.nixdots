@@ -14,7 +14,7 @@ luasnip-latex-snippets = pkgs.vimUtils.buildVimPlugin {
 in
 
 {
-programs.nixvim = {
+  programs.nixvim = {
 	enable = true;
 	colorschemes.kanagawa.enable = true;
 	globals.mapleader = " ";
@@ -26,7 +26,9 @@ programs.nixvim = {
 		require("leap").setup({})
 	
 	        '';	
-	opts.mouse = "";
+	opts = {
+	  mouse = "";
+	};
 	keymaps = [ 
 
 	 # First, a necessary evil...

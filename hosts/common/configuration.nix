@@ -45,6 +45,7 @@
       "video/mp4" = "mpv.desktop";
       "audio/*" = "mpv.desktop";
       "application/pdf" = "org.pwmt.zathura.desktop";
+      "inode/directory" = "thunar.desktop";
     };
   };
 
@@ -71,6 +72,12 @@
 	zlib
 	glib
       ];
+    };
+    thunar = {
+      enable = true;
+    };
+    steam = {
+      enable = true;
     };
   };
 
