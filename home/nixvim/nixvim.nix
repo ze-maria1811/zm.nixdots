@@ -157,8 +157,8 @@ in
 			settings = {
 			  quickfix_mode = 0;
 			  conceallevel = 1;
-			           };
 			  view_method = "zathura_simple";
+			           };
 		};
 
 		treesitter = {
@@ -167,7 +167,7 @@ in
 				enable = true;
 				disable = ["latex"]; 
 				    };
-			ident.enable = true;
+			indent.enable = true;
 			folding.enable = true;
 			autoLoad = true;
  			     };
