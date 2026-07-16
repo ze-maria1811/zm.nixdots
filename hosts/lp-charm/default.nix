@@ -4,6 +4,7 @@
 		../common/configuration.nix
 		./nvidia-lp.nix
 		./hardware-configuration.nix
+		./keyd.nix
 	];
 
 	hardware.bluetooth = {
@@ -24,5 +25,15 @@
 		home.packages = with pkgs; [
 		  vscode 
 		];
+	};
+
+	services.keyd = {
+		enable = true;
+		config = ''
+		[ids]
+		0001:0001
+		[main]
+		up = noop
+	'';
 	};
 }
