@@ -69,7 +69,7 @@
 	force = true;
 	  };
 
-    "Documents/.latex" = {
+    "Documents/.latex/note.tex" = {
 	source = "${./latex/note.tex}";
 	force = true;
 	  };

@@ -80,9 +80,6 @@
     thunar = {
       enable = true;
     };
-    steam = {
-      enable = true;
-    };
   };
 
   services.greetd = { # Login manager (greetd) settings
