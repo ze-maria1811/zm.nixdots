@@ -1,10 +1,12 @@
 {pkgs, ... }:
 {
+
  imports = [
  ./modules/programs.nix
  ./modules/fonts.nix
  ./nixvim/nixvim.nix
  ./zsh/zshrc.nix
+ ./modules/hyprpanel/hyprpanel.nix
   ];
 
   programs.home-manager.enable = true;
@@ -23,7 +25,6 @@
 	fastfetch
 	jdk	
 	hyprpaper
-	hyprpanel
 	firefox
 	obsidian
 	inkscape
@@ -35,6 +36,7 @@
 	flameshot
 	libreoffice
 	font-awesome
+	qbittorrent
 	nerd-fonts.meslo-lg
 	nerd-fonts.iosevka
     ];
@@ -66,6 +68,12 @@
 	source = "${./zsh/.p10k.zsh}";
 	force = true;
 	  };
+
+    "Documents/.latex" = {
+	source = "${./latex/note.tex}";
+	force = true;
+	  };
+    
   };
 
 }

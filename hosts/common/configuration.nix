@@ -1,6 +1,10 @@
 { pkgs, inputs, ... }:
 {
- imports = [inputs.home-manager.nixosModules.default];
+
+ imports = [
+ inputs.home-manager.nixosModules.default
+ ./stylix.nix
+ ];
 
   nix = { # Nix related settings; enables nix-command and flakes.
   	settings = {
@@ -119,6 +123,7 @@
   environment = { # Environment settings
     shells = with pkgs; [zsh];
     systemPackages = with pkgs; [
+	libcava
     	wget
 	python3
 	rustup

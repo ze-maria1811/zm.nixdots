@@ -1,0 +1,30 @@
+{nl, mk}:
+
+[
+	nl
+	{
+		opts = {
+		  hl = "Type";
+		  position = "center";
+		};
+
+		type = "text";
+		val = builtins.readFile ./title;
+	}
+	nl
+	{	
+		type = "group";
+		val =  import ./menu { inherit mk; };
+	}
+	nl
+	{
+		opts = {
+		  hl = "Type";
+		  position = "center";
+		};
+
+		type = "text";
+		val = "Welcome";
+	}
+]
+

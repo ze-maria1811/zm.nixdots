@@ -4,7 +4,6 @@
 		../common/configuration.nix
 		./nvidia-lp.nix
 		./hardware-configuration.nix
-		./keyd.nix
 	];
 
 	hardware.bluetooth = {
@@ -20,6 +19,10 @@
 			"1.0.0.1"
 		];
 	};
+
+	services = {
+		upower.enable = true;
+	};
 	
 	home-manager.users.vren = {
 		home.packages = with pkgs; [
@@ -27,13 +30,4 @@
 		];
 	};
 
-	services.keyd = {
-		enable = true;
-		config = ''
-		[ids]
-		0001:0001
-		[main]
-		up = noop
-	'';
-	};
 }

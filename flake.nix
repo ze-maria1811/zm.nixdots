@@ -18,17 +18,22 @@
 	url = "github:ze-maria1811/zm.nixdots";
 	flake = false;
      };
+
+     hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
+     stylix.url = "github:danth/stylix/release-26.05";
+
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, hyprpanel, stylix, ... }@inputs: {
     nixosConfigurations = {
 	pc-quark = nixpkgs.lib.nixosSystem { # PC host settings
 	   specialArgs = {inherit self inputs;};
            system = "x86_64-linux";
 	   modules = [
 		./hosts/pc-quark
-		home-manager.nixosModules.home-manager
-		 { home-manager = {
+		stylix.nixosModules.stylix ./hosts/common/configuration.nix
+		home-manager.nixosModules.home-manager { 
+		  home-manager = {
 		    extraSpecialArgs = {inherit inputs;};
 		    useGlobalPkgs = true;
 		    sharedModules = [inputs.nixvim.homeModules.nixvim]; 
@@ -43,8 +48,9 @@
 	   system = "x86_64-linux";
 	   modules = [
 		./hosts/lp-charm
-		home-manager.nixosModules.home-manager
-		 { home-manager = {
+		stylix.nixosModules.stylix ./hosts/common/configuration.nix
+		home-manager.nixosModules.home-manager { 
+	          home-manager = {
 		    extraSpecialArgs = {inherit inputs;};
 		    useGlobalPkgs = true;
 		    sharedModules = [inputs.nixvim.homeModules.nixvim];

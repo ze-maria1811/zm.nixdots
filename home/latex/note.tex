@@ -1,0 +1,22 @@
+\usepackage{amsmath, amssymb, mathtools, indentfirst, amsthm, tabularx}
+\usepackage[english, portuguese]{babel}
+
+% Delimiters 
+\DeclarePairedDelimiter{\p}{(}{)}
+\DeclarePairedDelimiter{\b}{[}{]}
+\DeclarePairedDelimiter{\set}{\{}{\}}
+\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
+
+% Theorem Styles
+\newtheorem{theorem}{Teorema}[section]
+\newtheorem{definition}{Definição}[section]
+\newtheorem{example}{Exemplo}[section]
+\newtheorem*{obs}{Observação}
+\newtheorem*{corollary}{Corolário}
+\newtheorem*{lemma}{Lema}
+\theoremstyle{remark}
+\newtheorem*{solution}{Resolução}
+
+% Custom Commands
+\newcommand{\inner}[2]{\left\langle #1; #2 \right\rangle}
+\renewcommand{\t}{\tilde}
